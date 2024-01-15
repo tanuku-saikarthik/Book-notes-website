@@ -1,0 +1,156 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, li, button, label, input, textarea {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.Title2 {
+    font-size: 1.5em;
+    color: #009933;
+}
+
+.sec1, .sec2, .sec3 {
+    margin-bottom: 20px;
+}
+
+.list {
+    display: block;
+    gap: 20px;
+}
+
+.block {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #009933; /* Green color for labels */
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Top Add Button Styles */
+button.add {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+}
+
+button.add:hover {
+    background-color: #0056b3;
+}
+
+/* Bottom Add Book Form Styles */
+form[action="/add"] {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form[action="/add"] label {
+    display: block;
+    margin-bottom: 5px;
+    color: #009933; /* Green color for labels */
+}
+
+form[action="/add"] input,
+form[action="/add"] textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form[action="/add"] button {
+    background-color: #009933;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form[action="/add"] button:hover {
+    background-color: #007a26;
+}
+
+.addd {
+    text-align: center;
+    color: #009933; /* Green color for centered text */
+}
+
+/* Add or update styles for the book container, book cover, and book info */
+.book-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .book-cover {
+    width: 100px; /* Adjust as needed */
+    margin-right: 20px; /* Adjust spacing between book cover and info */
+    float: left; /* Float the book cover to the left */
+  }
+  
+  .book-info {
+    flex-grow: 1; /* Allow the book info to take up remaining space */
+  }
+  
