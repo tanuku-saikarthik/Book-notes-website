@@ -1,0 +1,29 @@
+<!-- edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit.css">
+    <title>Edit Book</title>
+</head>
+<body>
+    <h1>Edit Book</h1>
+    <form action="/edit/<%= id %>" method="POST">
+        <!-- Include form fields for editing -->
+        <label for="author">Author:</label>
+        <input type="text" name="author" value="<%= author %>" required>
+
+        <label for="rating">Rating:</label>
+        <input type="number" name="rating" value="<%= rating %>" required>
+
+        <label for="summary">Summary:</label>
+        <textarea name="summary" rows="4" required><%= summary %></textarea>
+
+        <label for="notes">Notes:</label>
+        <textarea name="notes" rows="4" required><%= notes %></textarea>
+
+        <button type="submit">Update Book</button>
+    </form>
+</body>
+</html>
