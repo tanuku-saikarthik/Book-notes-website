@@ -63,7 +63,7 @@ app.get("/:id", async(req, res) => {
         const notes = formData.notes;
 
         res.render("notes.ejs", {
-            Title: formData.Title,
+            bookcover: formData.bookcover,
             Notes: notes
         });
     } catch (err) {

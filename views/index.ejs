@@ -8,15 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="heading">
-    <div class="Title">T.V.V.SAI KARTHIK</div>
-    <div class="Title2">BOOKS I'VE READ</div>
-    <div class="sec1">Tiny summary but detailed notes for each. This page will constantly update as I read more, so bookmark it if you want to check back in a few months.</div>
-    <div class="sec2">Sorted with my top recommendations up top. </div>
+       
+    <div class="Title" style="font-family: 'Dancing Script', cursive;font-size: 2.5rem; margin:10px;">BEYOND THE PAGES</div>
+    <div class="Title2"></div>
+    <div class="sec1">Written by real readers, for real readers. Share your reading journey with our active community and discover diverse perspectives.</div>
+    <div class="sec2">No time to read? No problem! Get the gist of any book with our bite-sized summaries, perfect for busy schedules. </div>
     </div>
-
+    <p><a href="#add-book" class="button-link">Add a book</a></p>
     <br>
     <hr style="width:50%;text-align:left;margin:auto;margin-bottom: 50px;">
     <div class="list">
@@ -34,16 +39,16 @@
                     </a>
                 </form>
                 <%= item.title %> 
-                <a href="/edit/<%= item.id %>">Edit</a>
-                <form action="/delete/<%= item.id %>" method="post" style="display:inline;">
-                    <button type="submit">Delete</button>
+                <a href="/edit/<%= item.id %>" style="text-decoration: underline;">Edit</a>
+                <form   action="/delete/<%= item.id %>" method="post" style="display:inline;">
+                    <button class="delete" type="submit">Delete</button>
                 </form>
-                <div class="sec3">Read my <a href="/<%= item.id %>">notes</a>.</div>
+                <div class="sec3">Read my <a style="text-decoration: underline;" href="/<%= item.id %>">notes</a>.</div>
             </div>
         <% }); %>
     </div>    <br>
 
-    <h1 class="addd">ADD A BOOK </h1>
+    <h1 class="addd" id="add-book">ADD A BOOK </h1>
     <form action="/add" method="post">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" required>
@@ -65,5 +70,6 @@
         
         <button type="submit">Add Book</button>
     </form>
+    
 </body>
 </html>
