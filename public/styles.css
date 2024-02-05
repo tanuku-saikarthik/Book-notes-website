@@ -60,7 +60,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, button, label, input, textarea {
 
 label {
     margin-bottom: 5px;
-    color: #009933; /* Green color for labels */
+    color: #009933; 
 }
 
 input, textarea {
@@ -83,7 +83,7 @@ button:hover, button.add:hover {
     background-color: #0056b3;
 }
 
-/* Bottom Add Book Form Styles */
+
 form[action="/add"] {
     max-width: 600px;
     margin: 0 auto;
@@ -97,7 +97,7 @@ form[action="/add"] {
 form[action="/add"] label {
     display: block;
     margin-bottom: 5px;
-    color: #009933; /* Green color for labels */
+    color: #009933; 
 }
 
 form[action="/add"] input,
@@ -124,22 +124,22 @@ form[action="/add"] button:hover {
 
 .addd {
     text-align: center;
-    color: #009933; /* Green color for centered text */
+    color: #009933; 
 }
 
-/* Add or update styles for the book container, book cover, and book info */
+
 .book-container {
     display: flex;
     margin-bottom: 20px;
 }
 
 .book-cover {
-    width: 100px; /* Adjust as needed */
-    margin-right: 20px; /* Adjust spacing between book cover and info */
+    width: 100px; 
+    margin-right: 20px; 
 }
 
 .book-info {
-    flex-grow: 1; /* Allow the book info to take up remaining space */
+    flex-grow: 1; 
 }
 
 

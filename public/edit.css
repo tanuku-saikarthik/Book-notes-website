@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-    color: #009933; /* Green color for header */
+    color: #009933; 
     text-align: center;
 }
 
@@ -28,7 +28,7 @@ form {
 label {
     display: block;
     margin: 10px 0;
-    color: #009933; /* Green color for labels */
+    color: #009933; 
 }
 
 input,
