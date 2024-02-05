@@ -2,8 +2,10 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    padding: 20px;
+    font-family: 'Julius Sans One', sans-serif;
+font-family: 'Merriweather', serif;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, a, li, button, label, input, textarea {
@@ -31,7 +33,8 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, button, label, input, textarea {
 }
 
 .list {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -41,6 +44,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, button, label, input, textarea {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
 .block img {
@@ -66,7 +70,7 @@ input, textarea {
     border-radius: 5px;
 }
 
-button {
+button, button.add {
     background-color: #0066cc;
     color: #fff;
     padding: 10px 20px;
@@ -75,22 +79,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Top Add Button Styles */
-button.add {
-    background-color: #0066cc;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none; /* Remove underline */
-}
-
-button.add:hover {
+button:hover, button.add:hover {
     background-color: #0056b3;
 }
 
@@ -142,15 +131,20 @@ form[action="/add"] button:hover {
 .book-container {
     display: flex;
     margin-bottom: 20px;
-  }
-  
-  .book-cover {
+}
+
+.book-cover {
     width: 100px; /* Adjust as needed */
     margin-right: 20px; /* Adjust spacing between book cover and info */
-    float: left; /* Float the book cover to the left */
-  }
-  
-  .book-info {
+}
+
+.book-info {
     flex-grow: 1; /* Allow the book info to take up remaining space */
-  }
-  
+}
+
+
+.Summary {
+    white-space: normal;
+    overflow: hidden;
+    word-wrap: break-word;
+}

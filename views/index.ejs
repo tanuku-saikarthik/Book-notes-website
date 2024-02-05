@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Books website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Merriweather:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="heading">
     <div class="Title">T.V.V.SAI KARTHIK</div>
     <div class="Title2">BOOKS I'VE READ</div>
     <div class="sec1">Tiny summary but detailed notes for each. This page will constantly update as I read more, so bookmark it if you want to check back in a few months.</div>
     <div class="sec2">Sorted with my top recommendations up top. </div>
-    
+    </div>
+
     <br>
     <hr style="width:50%;text-align:left;margin:auto;margin-bottom: 50px;">
     <div class="list">
@@ -20,27 +25,24 @@
                 <form class="form" action="/<%= item.id %>" method="get">
                     <a href="/<%= item.id %>">
                         <img src="<%= item.bookcover %>" alt="Book cover">
-                        <h3>Title:<%= item.book_name %></h3>
                         <div>
+                            <h3>Title:<%= item.book_name %></h3>
                             <p>Author: <%= item.author %></p>
                             <p>Rating: <%= item.rating %>/10</p>
-                        </div>
-                        <div>
-                            Summary:<%= item.summary %>
+                            <p class = "Summary">Summary:<%= item.summary %></p>
                         </div>
                     </a>
                 </form>
                 <%= item.title %> 
-            <a href="/edit/<%= item.id %>">Edit</a>
-            <form action="/delete/<%= item.id %>" method="post" style="display:inline;">
-                <button type="submit">Delete</button>
-            </form>
-        </li>
+                <a href="/edit/<%= item.id %>">Edit</a>
+                <form action="/delete/<%= item.id %>" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
                 <div class="sec3">Read my <a href="/<%= item.id %>">notes</a>.</div>
             </div>
         <% }); %>
-    </div>
-    <br>
+    </div>    <br>
+
     <h1 class="addd">ADD A BOOK </h1>
     <form action="/add" method="post">
         <label for="title">Title:</label>
@@ -53,20 +55,15 @@
         <input type="number" id="rating" name="rating" required>
         
         <label for="summary">Summary:</label>
-        <textarea id="summary"  name="summary" required></textarea>
+        <input id="summary"  name="summary" required></input>
 
         <label for="notes">Notes:</label>
-        <textarea id="notes"  name="notes" required></textarea>
+        <input id="notes"  name="notes" required></input>
         
         <label for="isbn">ISBN:</label>
         <input type="text" id="isbn" name="isbn" required>
         
         <button type="submit">Add Book</button>
     </form>
-    <!-- index.ejs -->
-<!-- ... (existing code) -->
-
-<!-- ... (existing code) -->
-
 </body>
 </html>

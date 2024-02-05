@@ -74,9 +74,7 @@ app.get("/:id", async(req, res) => {
 
 
 
-app.get('/add', (req, res) => {
-  res.render("add.ejs");
-});
+
 
 app.post('/add', async (req, res) => {
     try {
@@ -84,7 +82,7 @@ app.post('/add', async (req, res) => {
   
         await db.query("INSERT INTO books (book_name, author, rating, summary,notes, isbn) VALUES ($1, $2, $3, $4, $5, $6)",
             [title, author, rating, summary,notes, isbn]);
-  
+        
         res.redirect('/');
     } catch (err) {
         console.log(err);
